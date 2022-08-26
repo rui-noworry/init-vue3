@@ -1,0 +1,180 @@
+/*自定义 element plus 颜色样式*/
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  $colors: (
+    "primary": (
+      "base": $mainColor,
+    ),
+    "success": (
+      "base": $successColor,
+    ),
+    "warning": (
+      "base": $warningColor,
+    ),
+    "danger": (
+      "base": $dangerColor,
+    ),
+    "error": (
+      "base": $errorColor,
+    ),
+    "info": (
+      "base": $infoColor,
+    ),
+  ),
+  $font-size: (
+     'base': 12px,
+  ),
+  $border-radius: (
+     'base': 2px,
+  ),
+  $disabled: (
+    'bg-color': $backgroundColor2,
+    'text-color': $borderColor2,
+    'border-color': $borderColor2
+  ),
+  $input: (
+     'text-color': $fontColor,
+     'border-color': $borderColor2,
+     'bg-color': inherit,
+     'hover-border-color': $mainHoverColor,
+     'focus-border-color': $mainHoverColor,
+  ),
+  $table: (
+    'border-color': $borderColor,
+    'text-color': $fontColor,
+    'header-text-color': $fontColor2,
+    'row-hover-bg-color': $tableHoverBGColor,
+    'header-bg-color': $backgroundColor3,
+    'bg-color': $backgroundColor6,
+    'tr-bg-color': inherit,
+    'fixed-left-column': $tableFixedBoxShadow,
+    'fixed-right-column': $tableFixedBoxShadow2,
+  ),
+  $dialog: (
+    'title-font-size': 14px,
+    'content-font-size': 12px,
+    'padding-primary': 12px,
+    'bg-color': $backgroundColor,
+  ),
+  $message: (
+    'close-icon-color': $fontColor,
+  ),
+  $messagebox: (
+    'title-color': $fontColor,
+    'content-color': $fontColor,
+    'padding-primary': 24px,
+  ),
+  $popover: (
+    'bg-color': $backgroundColor,
+    'border-color': $borderColor2,
+    'padding': 8px,
+    'title-font-size': 12px,
+    'title-text-color': $fontColor,
+    'border-radius': 2px,
+  ),
+  $pagination: (
+    'font-size': 12px,
+    'bg-color': $backgroundColor,
+    'text-color':$paginationTextColor,
+    'button-color': $paginationTextColor,
+    'button-width': 32px,
+    'button-height': 26px,
+    'button-disabled-bg-color': $backgroundColor,
+    'button-disabled-color': $fontColor3,
+    'hover-color': $mainColor,
+  ),
+  $radio: (
+    'text-color': $fontColor,
+    'input-bg-color': $backgroundColor,
+    'input-border': 1px $borderColor2 solid,
+  ),
+  $radio-disabled: (
+    'input-border-color': $borderColor2,
+    'input-fill': $checkboxDisabledBG,
+    'checked-input-border-color': $borderColor2,
+  ),
+  $checkbox: (
+    'text-color': $fontColor,
+    'bg-color': $backgroundColor,
+    'font-size': 12px,
+    'input-border': 1px $borderColor2 solid,
+    'disabled-border-color': $borderColor2,
+    'disabled-input-fill': $checkboxDisabledBG,
+    'disabled-checked-input-fill': $borderColor2,
+    'disabled-checked-input-border-color': $borderColor2,
+  ),
+  $radio-button: (
+    'checked-bg-color': $secColor,
+    'checked-text-color': $mainColor,
+  ),
+  $tag: (
+    'border-radius': 2px,
+  ),
+  $select-option: (
+    'hover-background': $backgroundColor3,
+  ),
+  $select-dropdown: (
+    'bg-color': $backgroundColor,
+  ),
+  $date-editor: (
+    'datetimerange-width': 300px,
+  ),
+  $button: (
+    'border-color': $borderColor2,
+    'bg-color': none,
+    'text-color': $fontColor,
+    'hover-border-color': $mainHoverColor,
+    'hover-bg-color': none,
+    'disabled-bg-color': $disabledBG,
+    'disabled-border-color': $disabledColor,
+    'disabled-text-color': $disabledColor,
+    'active-text-color': $buttonActiveColor,
+    'active-border-color': $buttonActiveColor,
+    'active-bg-color': $buttonActiveBg,
+  ),
+  $slider: (
+    'runway-bg-color': $backgroundColor4,
+    'stop-bg-color': $backgroundColor,
+    'button-size': 16px,
+  ),
+  $dropdown: (
+    'menuItem-hover-fill': $backgroundColor3,
+    'menuItem-hover-color': $fontColor,
+  ),
+  $datepicker: (
+    'icon-color': $fontColor2,
+    'off-text-color': $fontColor4,
+    'inner-border-color': $borderColor2,
+    'header-text-color': $fontColor2,
+    'inrange-bg-color': $backgroundColor5,
+    'inrange-hover-bg-color': $backgroundColor5,
+  ),
+  $card: (
+    'border-color': $borderColor2,
+    'border-radius': 2px,
+    'padding': 16px,
+    'bg-color': $backgroundColor,
+  ),
+  $collapse: (
+    'border-color': $borderColor2,
+    'header-bg-color': $backgroundColor3,
+    'header-text-color': $fontColor,
+    'header-font-size': 14px,
+    'content-bg-color': $backgroundColor6,
+    'content-font-size': 14px,
+    'content-text-color': $fontColor2,
+  ),
+  $transfer: (
+    'border-color': $borderColor2,
+    'border-radius': 2px,
+    'panel-header-bg-color': $backgroundColor3,
+    'item-height': 32px,
+    'panel-width': 240px,
+  ),
+  $menu: (
+    'text-color': $fontColor,
+    'bg-color': none,
+    'hover-bg-color': $menuActiveBackground,
+  )
+);
+
+@use "element-plus/theme-chalk/src/index.scss" as *

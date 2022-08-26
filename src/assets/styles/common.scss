@@ -1,0 +1,515 @@
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 12px;
+  margin: 0;
+  font-family: PingFangSC-Regular,PingFangSC-Medium, PingFang SC, Helvetica Neue, Helvetica,  Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+p{
+  margin: 0;
+}
+ul,li{ padding:0;margin:0;list-style:none}
+div:focus {
+  outline: none;
+}
+.text-left{
+  text-align:left;
+}
+.text-right{
+  text-align:right;
+}
+.text-center{
+  text-align:center;
+}
+.display-block {
+  display: block;
+}
+.display-inline {
+  display: inline;
+}
+.display-inline-block {
+  display: inline-block;
+}
+.display-flex {
+  display: flex;
+}
+.flex-item{
+  flex: 1;
+}
+.align-center{
+  align-items: center;
+}
+.align-top{
+  align-items: start;
+}
+.justify-center{
+  justify-content: center;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.justify-left{
+  justify-content: flex-start;
+}
+.justify-right{
+  justify-content: flex-end !important;
+}
+.flex-nowrap {
+    flex-wrap: nowrap !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+.red{
+  color: $errorColor;
+}
+.font-color{
+  color: $fontColor;
+}
+
+/*  段落文字样式 */
+.font-bold{
+  font-weight:bold;
+}
+.f-14{
+  font-size:14px !important;
+}
+.f-16{
+  font-size:16px !important;
+}
+.f-18{
+  font-size:18px !important;
+}
+.paragraph{
+  font-size:14px;
+  line-height:24px;
+}
+.remark, .remark-main, .remark-warning, .remark-success, .remark-error{
+  font-size:12px;
+  line-height:20px;
+}
+.remark{
+  color: $fontColor3;
+}
+.remark-main{
+  color: $mainColor;
+}
+.remark-warning{
+  color: $warningColor;
+}
+.remark-success{
+  color: $successColor;
+}
+.remark-error{
+  color: $errorColor;
+}
+.remark-normal{
+  color: $fontColor;
+}
+.text-indent{
+  text-indent: 3em;
+}
+
+/*长度*/
+.W-100{width:100%;}
+.H-100{height:100%;}
+
+@for $i from 10 through 90 {
+    .w-percent-#{$i} { width: $i * 1% !important; }
+}
+
+@for $i from 0 through 120 {
+    .m-#{$i*5} {margin: #{$i*5}px !important;}
+    .m-#{$i*2} {margin: #{$i*2}px !important;}
+    .m-l-#{$i*5} {margin-left: #{$i*5}px !important;}
+    .m-l-#{$i*2} {margin-left: #{$i*2}px !important;}
+    .m-r-#{$i*5} {margin-right: #{$i*5}px !important;}
+    .m-r-#{$i*2} {margin-right: #{$i*2}px !important;}
+    .m-b-#{$i*5} {margin-bottom: #{$i*5}px !important;}
+    .m-b-#{$i*2} {margin-bottom: #{$i*2}px !important;}
+    .m-t-#{$i*5} {margin-top: #{$i*5}px !important;}
+    .m-t-#{$i*2} {margin-top: #{$i*2}px !important;}
+
+    .p-#{$i*5} {padding: #{$i*5}px !important;}
+    .p-#{$i*2} {padding: #{$i*2}px !important;}
+    .p-l-#{$i*5} {padding-left: #{$i*5}px !important;}
+    .p-l-#{$i*2} {padding-left: #{$i*2}px !important;}
+    .p-r-#{$i*5} {padding-right: #{$i*5}px !important;}
+    .p-r-#{$i*2} {padding-right: #{$i*2}px !important;}
+    .p-b-#{$i*5} {padding-bottom: #{$i*5}px !important;}
+    .p-b-#{$i*2} {padding-bottom: #{$i*2}px !important;}
+    .p-t-#{$i*5} {padding-top: #{$i*5}px !important;}
+    .p-t-#{$i*2} {padding-top: #{$i*2}px !important;}
+    .w-#{$i*5} {width: #{$i*5}px !important;}
+    .h-#{$i*5} {height: #{$i*5}px !important;}
+    .t-#{$i} { top: #{$i}px }
+    .l-#{$i} { left: #{$i}px }
+    .b-#{$i} { bottom: #{$i}px }
+    .r-#{$i} { right: #{$i}px }
+}
+// 水平居中
+.margin-auto {
+    margin: 0 auto;
+}
+
+/* 四周阴影 */
+@mixin box-shadow($bulr: 2px -2px 15px 0, $color: red) {
+	-webkit-box-shadow: $bulr $color;
+	-moz-box-shadow: $bulr $color;
+	box-shadow: $bulr $color;
+}
+
+.bg-1{
+  background-color: $backgroundColor;
+}
+.bg-2{
+  background-color: $backgroundColor2;
+}
+.bg-3{
+  background-color: $backgroundColor3;
+}
+.border {
+  border: 1px $borderColor solid;
+}
+.border-b{
+  border-bottom: 1px $borderColor solid;
+}
+.border-t{
+  border-top: 1px $borderColor solid;
+}
+.border-r{
+  border-right: 1px $borderColor solid;
+}
+.border-l{
+  border-left: 1px $borderColor solid;
+}
+.border-2{
+  border: 2px $borderColor solid;
+}
+.border-b-2{
+  border-bottom: 2px $borderColor solid;
+}
+.border-t-2{
+  border-top: 2px $borderColor solid;
+}
+.border-r-2{
+  border-right: 2px $borderColor solid;
+}
+.border-l-2{
+  border-left: 2px $borderColor solid;
+}
+
+/* 重复用到的样式 */
+.title{
+  font-size:14px;
+  padding:8px 0;
+  line-height: 20px;
+  font-weight: bold;
+  color: $fontColor;
+  margin: 8px 0;
+  word-break: break-all;
+}
+.link{
+  color:$mainActiveColor;
+  &:hover{
+    color: $mainHoverColor;
+  }
+}
+
+.cost-card{
+  padding:16px 0;
+  margin:0 24px;
+  .cost-title{
+    font-weight:bold;
+    padding:5px 0;
+    margin-bottom: 4px;
+  }
+}
+.cost{
+    color: $mainColor;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.delete-line{
+  text-decoration:line-through;
+}
+
+.crumbs{
+  padding-left: 8px;
+  height:48px;
+  display: flex;
+  div{
+    display: inline-block;
+    height:48px;
+    line-height: 48px;
+    color:$crumbsfont;
+    &::after{
+      content: '/';
+      padding: 8px;
+    }
+    &:last-child{
+      color: $crumbsfontActive;
+      &::after{
+        content: '';
+      }
+    }
+  }
+}
+
+.card-box{
+  border: 1px $borderColor solid;
+  border-radius: 2px;
+  position: relative;
+  &.add-card{
+    border:1px $borderColor2 dashed;
+    border-radius: 2px;
+    position: relative;
+    .add-text{
+      width:100%;
+      height:100%;
+      font-size:16px;
+      font-weight: bold;
+      color: $fontColor3;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .add-btn{
+      position: absolute;
+      bottom:32px;
+      right:32px;
+      font-size:24px;
+      width:32px;
+      height:32px;
+      border-radius: 100% !important;
+    }
+    .el-icon{
+      margin-left: 0px;
+      margin-top: -2px;
+    }
+  }
+  .hide{
+    display: none;
+  }
+}
+.card-box-title{
+  background-color: $cardTitBG;
+  height:52px;
+  line-height:52px;
+  font-size:14px;
+  font-weight: bold;
+  padding:0 16px;
+  border-bottom: 1px $borderColor solid;
+}
+.card-box-con{
+  padding:12px 20px;
+}
+.card-box-footer{
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  border-top: 1px $borderColor solid;
+  height:48px;
+  line-height: 1;
+  display: flex;
+  .footer-button{
+    background: none !important;
+    border:0 !important;
+    width:100%;
+    height:100%;
+    color: $mainColor;
+  }
+  .divider{
+    width:1px;
+    background-color: $borderColor;
+    margin:12px 0;
+    height:23px;
+  }
+}
+.card-menu{
+    position: absolute;
+    height:100%;
+    top:0;
+    right:0;
+    background-color: #fff;
+    box-shadow: -6px 0 12px -7px $boxShadowBackground, -5px 0 6px -5px $boxShadowBackground, -1px 0px 2px -2px $boxShadowBackground;
+    .card-menu-btn {
+        width:100%;
+        border:0 !important;
+        margin:2px 0;
+        color: $fontColor;
+        padding-left: 16px;
+        text-align: left;
+        display: block;
+        margin-left:0 !important;
+        background: none !important;
+        &:hover{
+          background-color: $backgroundColor2 !important;
+          color: $fontColor;
+        }
+    }
+}
+
+.form-footer-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:100%;
+  .footer-left{
+    width: 230px;
+  }
+  .footer-content{
+    flex: 1;
+    height:100%;
+  }
+  .footer-flex{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height:60px;
+    justify-content: center;
+    align-content: flex-start;
+    .form-desc-item{
+      width: 230px;
+      margin-right:16px;
+    }
+  }
+  .footer-right{
+    width:160px;
+    padding: 8px 0;
+  }
+}
+.position-relative {
+  position: relative;
+}
+
+.check_select_list {
+  overflow-y: auto;
+}
+
+.check_select_list .el-checkbox {
+  margin: 0px 22px 8px 0;
+  color: #576077 !important;
+  font-weight: 400;
+  float: left;
+}
+
+.check_select_list .el-checkbox .el-checkbox__input {
+  margin-right: 8px;
+}
+
+.check_select_list .el-checkbox .el-checkbox__label {
+  width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.check_select_list .el-checkbox:checked + {
+  color: #4984E7;
+}
+
+.check_select_list .el-checkbox .el-checkbox__label {
+  width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.el-checkbox-group > .check_text {
+  font-size: 12px;
+}
+
+.checkbox_list .el-checkbox {
+  padding-bottom: 5px;
+}
+
+.checkbox_list .el-checkbox .edit_input {
+  height: 28px;
+}
+
+.checkbox_list .el-checkbox + .el-checkbox {
+  margin-left: 0;
+}
+
+.table-default{
+  width: 100%;
+  max-width: 100%;
+  background-color: $backgroundColor6;
+  color: $fontColor;
+  table-layout: fixed;
+  border-collapse: collapse;
+  thead{
+    background-color: $backgroundColor3;
+    border-bottom: 1px $borderColor solid;
+  }
+  tr{
+    background-color: inherit;
+  }
+  th{
+    padding: 6px 16px;
+    line-height: 20px;
+    font-weight: normal;
+    text-align: left;
+    color: $fontColor2;
+  }
+  tbody{
+    td{
+      padding: 18px 16px;
+      line-height: 20px;
+      border-bottom: 1px $borderColor solid;
+    }
+  }
+}
+
+
+
+
+
+
